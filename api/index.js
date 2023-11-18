@@ -25,8 +25,10 @@ app.use(express.urlencoded({extended: true, limit:'25mb'}))
 app.use('/uploads', express.static(__dirname + "/uploads"))
 app.use(express.json())
 app.use(cors({
-    credentials: true,
-    origin: "https://e-suk-2e5v.vercel.app"
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
 }))
 
 
