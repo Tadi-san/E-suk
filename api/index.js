@@ -26,7 +26,7 @@ app.use('/uploads', express.static(__dirname + "/uploads"))
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: "https://e-suk-2e5v.vercel.app"
 }))
 
 
